@@ -1,0 +1,77 @@
+import cartValidations.CartValidations as CartValidations
+import internal.GlobalVariable as GlobalVariable
+import navigations.navigation as navigation
+import quickOrderPageActions.quickOrderActions as quickOrderActions
+import quickOrderPageValidation.quickOrderValidations as quickOrderValidations
+
+navigation.openBrowser()
+
+navigation.navigateToNeededPage(GlobalVariable.quickOrderURL)
+
+quickOrderActions.enterSearchField(GlobalVariable.searchTerm)
+
+String MfgNumber = quickOrderActions.selectRandomProduct()
+
+quickOrderActions.enterQTY(GlobalVariable.QTY)
+
+MfgNumber = quickOrderActions.clickAddToOrderButton(GlobalVariable.searchTerm, MfgNumber)
+
+CartValidations.verifyConfirmationMessageIsAppear()
+
+HashMap<String, Integer> productInfo = new HashMap<String, Integer>()
+
+double productTotalPrice = quickOrderActions.getProductTotalPrice(GlobalVariable.lastProductAddedIndex)
+
+productInfo.put(MfgNumber, productTotalPrice)
+
+quickOrderValidations.verifyAddToOrderButtonIsDisable()
+
+quickOrderValidations.verifyAddToCartAndCheckoutButtonIsEnable()
+
+quickOrderValidations.verifySearcFieldAndQTYArecleared()
+
+quickOrderValidations.verifyTheOrderSummary(productInfo, GlobalVariable.orderSummaryInQuickOrderPage)
+
+quickOrderActions.enterSearchField(GlobalVariable.otherSearchTerm)
+
+MfgNumber = quickOrderActions.selectRandomProduct()
+
+quickOrderActions.enterQTY(GlobalVariable.QTY)
+
+MfgNumber = quickOrderActions.clickAddToOrderButton(GlobalVariable.otherSearchTerm, MfgNumber)
+
+CartValidations.verifyConfirmationMessageIsAppear()
+
+productTotalPrice = quickOrderActions.getProductTotalPrice(GlobalVariable.lastProductAddedIndex)
+
+productInfo.put(MfgNumber, productTotalPrice)
+
+quickOrderValidations.verifyAddToOrderButtonIsDisable()
+
+quickOrderValidations.verifyAddToCartAndCheckoutButtonIsEnable()
+
+quickOrderValidations.verifySearcFieldAndQTYArecleared()
+
+quickOrderValidations.verifyTheOrderSummary(productInfo, GlobalVariable.orderSummaryInQuickOrderPage)
+
+quickOrderValidations.verifyTheProductsInOrderLineAreSameToTheAddedProduct(productInfo)
+
+quickOrderActions.clickAddToCartAndCheckoutButton()
+
+CartValidations.verifyConfirmationMessageIsAppear()
+
+quickOrderValidations.verifyNavigatedToCartSuccessfully()
+
+CartValidations.verifyCartItemNumber(--(GlobalVariable.numberOfAddedProducts))
+
+quickOrderValidations.verifyTheOrderInCartIsCorrect(productInfo)
+
+quickOrderValidations.verifyTheOrderAddedToCartWithCorrectQuantity()
+
+quickOrderValidations.verifyTheOrderSummary(productInfo, GlobalVariable.orderSummaryInCart)
+
+quickOrderValidations.verifyNumberOfProducsIsCorrect(GlobalVariable.numberOfAddedProducts)
+
+quickOrderValidations.verifyLoginForYourPriceButtonIsVisible()
+
+navigation.closeBrowser()

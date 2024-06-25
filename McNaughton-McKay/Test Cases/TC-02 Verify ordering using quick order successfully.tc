@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC-02 Verify ordering using quick order successfully</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>f2b27ba3-e93a-4ace-aa56-3d7cc3ab3161</testCaseGuid>
+</TestCaseEntity>

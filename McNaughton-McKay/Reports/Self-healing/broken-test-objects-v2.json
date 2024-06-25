@@ -1,0 +1,84 @@
+{
+  "brokenTestObjects": [
+    {
+      "approved": true,
+      "testObjectId": "Object Repository/productPage/QTY",
+      "brokenLocator": "div[data-test-selector\u003d\u0027productListCards_undefined\u0027] \u003e :nth-child(${productIndex})  input[data-test-selector\u003d\u0027product_qtyOrdered\u0027]",
+      "brokenLocatorMethod": "CSS",
+      "proposedLocator": "div[data-test-selector\u003d\u0027productListCards_undefined\u0027] \u003e :nth-child(1)  input[data-test-selector\u003d\u0027product_qtyOrdered\u0027]",
+      "proposedLocatorMethod": "BASIC",
+      "recoveryMethod": "BASIC",
+      "pathToScreenshot": "Reports/Self-healing/Object Repository/productPage/QTY_BASIC.png"
+    },
+    {
+      "approved": true,
+      "testObjectId": "Object Repository/searchResultPage/MFG",
+      "brokenLocator": "div[data-test-selector\u003d\u0027productListCards_undefined\u0027] \u003e :nth-child(${productIndex}) span[data-test-selector\u003d\u0027manufacturerItem\u0027]",
+      "brokenLocatorMethod": "CSS",
+      "proposedLocator": "div[data-test-selector\u003d\u0027productListCards_undefined\u0027] \u003e :nth-child(1) span[data-test-selector\u003d\u0027manufacturerItem\u0027]",
+      "proposedLocatorMethod": "BASIC",
+      "recoveryMethod": "BASIC",
+      "pathToScreenshot": "Reports/Self-healing/Object Repository/searchResultPage/MFG_BASIC.png"
+    },
+    {
+      "approved": true,
+      "testObjectId": "Object Repository/searchResultPage/addToCartButton",
+      "brokenLocator": "div[data-test-selector\u003d\u0027productListCards_undefined\u0027] \u003e :nth-child(${targetProductIndex})  button[data-test-selector^\u003d\u0027actionsAddToCart\u0027]",
+      "brokenLocatorMethod": "CSS",
+      "proposedLocator": "div[data-test-selector\u003d\u0027productListCards_undefined\u0027] \u003e :nth-child(1)  button[data-test-selector^\u003d\u0027actionsAddToCart\u0027]",
+      "proposedLocatorMethod": "BASIC",
+      "recoveryMethod": "BASIC",
+      "pathToScreenshot": "Reports/Self-healing/Object Repository/searchResultPage/addToCartButton_BASIC.png"
+    },
+    {
+      "approved": true,
+      "testObjectId": "Object Repository/quickOrderPage/productInDropDown",
+      "brokenLocator": "[role\u003d\"listbox\"] \u003e div:nth-child(${index})",
+      "brokenLocatorMethod": "CSS",
+      "proposedLocator": "[role\u003d\u0027listbox\u0027] \u003e div:nth-child(8)",
+      "proposedLocatorMethod": "BASIC",
+      "recoveryMethod": "BASIC",
+      "pathToScreenshot": "Reports/Self-healing/Object Repository/quickOrderPage/productInDropDown_BASIC.png"
+    },
+    {
+      "approved": true,
+      "testObjectId": "Object Repository/quickOrderPage/MFGNumber",
+      "brokenLocator": "[data-test-selector\u003d\"productSelector\"] ~ div \u003e div:nth-child(${index}) [data-test-selector\u003d\"manufacturerItem\"]",
+      "brokenLocatorMethod": "CSS",
+      "proposedLocator": "[data-test-selector\u003d\u0027productSelector\u0027] ~ div \u003e div:nth-child(1)",
+      "proposedLocatorMethod": "BASIC",
+      "recoveryMethod": "BASIC",
+      "pathToScreenshot": "Reports/Self-healing/Object Repository/quickOrderPage/MFGNumber_BASIC.png"
+    },
+    {
+      "approved": true,
+      "testObjectId": "Object Repository/quickOrderPage/productTotalPrics",
+      "brokenLocator": "[data-test-selector\u003d\"productSelector\"] ~ div \u003e div:nth-child(${index}) [data-test-selector\u003d\"text_Total\"]",
+      "brokenLocatorMethod": "CSS",
+      "proposedLocator": "[data-test-selector\u003d\u0027productSelector\u0027] ~ div \u003e div:nth-child(2) [data-test-selector\u003d\u0027text_Total\u0027]",
+      "proposedLocatorMethod": "BASIC",
+      "recoveryMethod": "BASIC",
+      "pathToScreenshot": "Reports/Self-healing/Object Repository/quickOrderPage/productTotalPrics_BASIC.png"
+    },
+    {
+      "approved": true,
+      "testObjectId": "Object Repository/quickOrderPage/MFGInCartForQuickOrder",
+      "brokenLocator": "section div[class^\u003d\"LoadingOverlayStyle\"] \u003e :nth-child(3)  \u003e :nth-child(${index}) span[data-test-selector\u003d\"manufacturerItem\"]",
+      "brokenLocatorMethod": "CSS",
+      "proposedLocator": "section div[class^\u003d\u0027LoadingOverlayStyle\u0027] \u003e :nth-child(3)  \u003e :nth-child(2) span[data-test-selector\u003d\u0027manufacturerItem\u0027]",
+      "proposedLocatorMethod": "BASIC",
+      "recoveryMethod": "BASIC",
+      "pathToScreenshot": "Reports/Self-healing/Object Repository/quickOrderPage/MFGInCartForQuickOrder_BASIC.png"
+    },
+    {
+      "approved": true,
+      "testObjectId": "Object Repository/quickOrderPage/QTYInCart",
+      "brokenLocator": "section div[class^\u003d\"LoadingOverlayStyle\"] \u003e :nth-child(3)  \u003e :nth-child(${index}) [data-test-selector\u003d\"cartline_qty\"]",
+      "brokenLocatorMethod": "CSS",
+      "proposedLocator": "section div[class^\u003d\u0027LoadingOverlayStyle\u0027] \u003e :nth-child(3)  \u003e :nth-child(2) [data-test-selector\u003d\u0027cartline_qty\u0027]",
+      "proposedLocatorMethod": "BASIC",
+      "recoveryMethod": "BASIC",
+      "pathToScreenshot": "Reports/Self-healing/Object Repository/quickOrderPage/QTYInCart_BASIC.png"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+import cartValidations.CartValidations
+import internal.GlobalVariable
+import navigations.navigation
+import productPageActions.ProductActions
+import randomProduct.randomProductActions
+import searchResultPageActions.SearchResultPageActions 
+
+navigation.openBrowser()
+navigation.navigateToNeededPage(GlobalVariable.URL)
+
+ProductActions.enterSearchTerm(GlobalVariable.productName)
+
+ProductActions.clickSearchButton()
+
+String QTYForFirstProduct = randomProductActions.setRandomQTY(GlobalVariable.productIndex)
+
+String MFGForFirstProduct = SearchResultPageActions.getProductMFGNumber(GlobalVariable.productIndex)
+
+SearchResultPageActions.clickAddToCartButton(GlobalVariable.productIndex)
+
+CartValidations.verifyConfirmationMessageIsAppear()
+
+CartValidations.verifyCartItemNumber(GlobalVariable.itemNumber)
+
+ProductActions.enterSearchTerm(GlobalVariable.secondProductName)
+
+ProductActions.clickSearchButton()
+
+productIndex = randomProductActions.selectRandomProduct(MFGForFirstProduct)
+
+String QTYForSecondProduct = randomProductActions.setRandomQTY(productIndex)
+
+String MFGForSecondProduct = SearchResultPageActions.getProductMFGNumber(productIndex)
+
+SearchResultPageActions.clickAddToCartButton(productIndex)
+
+CartValidations.verifyConfirmationMessageIsAppear()
+
+GlobalVariable.itemNumber = 2
+
+CartValidations.verifyCartItemNumber(GlobalVariable.itemNumber)
+
+navigation.navigateToNeededPage(GlobalVariable.cartURL)
+
+CartValidations.MFGNumberExistInCart(MFGForFirstProduct)
+
+CartValidations.MFGNumberExistInCart(MFGForSecondProduct)
+
+CartValidations.verifyQuantityForAddedProduct(QTYForFirstProduct)
+
+CartValidations.verifyQuantityForAddedProduct(QTYForSecondProduct)
+
+navigation.closeBrowser()

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC-01 Verify add product to cart successfully</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>5f4cc247-30c8-44ed-b97a-6d7f27ec666c</testCaseGuid>
+</TestCaseEntity>
